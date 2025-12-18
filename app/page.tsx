@@ -7,8 +7,8 @@ export default function HomePage() {
   return (
     <main className="w-full">
       {/* HERO */}
-      <section className="h-screen flex items-center justify-center px-8 text-center">
-        <div className="-translate-y-8">
+      <section className="min-h-screen flex items-center justify-center px-6 sm:px-8 py-16 text-center">
+        <div className="-translate-y-4 sm:-translate-y-8 max-w-2xl">
           <BlurText
             text="Logger"
             delay={250}
@@ -22,14 +22,14 @@ export default function HomePage() {
             delay={100}
             animateBy="words"
             direction="bottom"
-            className="mt-6 text-gray-600 max-w-md"
+            className="mt-6 text-gray-600 max-w-xl mx-auto text-lg"
           />
 
-          <div className="mt-8 flex gap-4 justify-center">
-            <button className="px-6 py-3 bg-black text-white rounded">
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
+            <button className="px-6 py-3 bg-black text-white rounded font-semibold">
               Download Free
             </button>
-            <button className="px-6 py-3 border rounded">
+            <button className="px-6 py-3 border rounded font-semibold">
               See how it works
             </button>
           </div>
