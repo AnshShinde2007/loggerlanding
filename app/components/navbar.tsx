@@ -110,6 +110,37 @@ export default function Navbar() {
           >
             Pricing
           </Link>
+
+          <div className="px-4 pt-2 text-sm text-gray-600">Socials</div>
+          <div className="px-4 grid grid-cols-3 gap-3 text-sm font-semibold">
+            <a
+              href="https://x.com/arthlete_fit?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAOw0rNleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAadxX_UrBbKNWBi2hIijoFfgZuUj1dySpUkjeyP1_V1f0p2eSRCkycVJqBkDmQ_aem_NN2QzPkOXBdd0Ziw1MXrFw"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center gap-2 rounded-lg border bg-white py-2 hover:bg-gray-50"
+              aria-label="Open X"
+              onClick={() => setIsOpen(false)}
+            >
+                <Image src="/x.png" alt="X" width={18} height={18} className="object-contain" />
+                <span className="sr-only">X</span>
+            </a>
+            <a
+              href="https://www.instagram.com/logger.fit?igsh=MWw4djZiOHB2MW1zZg=="
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center rounded-lg border bg-white py-2 hover:bg-gray-50"
+              aria-label="Open Instagram"
+              onClick={() => setIsOpen(false)}
+            >
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="4" ry="4" />
+                <circle cx="12" cy="12" r="3.5" />
+                <circle cx="16.5" cy="7.5" r="1" fill="currentColor" />
+              </svg>
+              <span className="sr-only">Instagram</span>
+            </a>
+          </div>
+
           <button className="w-full px-4 py-3 bg-black text-white rounded-lg font-semibold" onClick={() => setIsOpen(false)}>
             Download
           </button>
