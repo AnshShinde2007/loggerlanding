@@ -1,9 +1,15 @@
+"use client";
+
+import { useState } from "react";
 import BlurText from "./components/BlurText";
 import PricingPage from "./pricing/page";
 import HowItWorksPage from "./how-it-works/page";
 import FeaturesPage from "./features/page";
+import WaitlistModal from "./components/WaitlistModal";
 
 export default function HomePage() {
+  const [open, setOpen] = useState(false);
+
   return (
     <main className="w-full">
       {/* HERO */}
@@ -25,10 +31,14 @@ export default function HomePage() {
             className="mt-6 text-gray-600 max-w-xl mx-auto text-lg"
           />
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
-            <button className="px-6 py-3 bg-black text-white rounded font-semibold">
-              Download Free
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              onClick={() => setOpen(true)}
+              className="px-6 py-3 bg-black text-white rounded font-semibold"
+            >
+              WaitList
             </button>
+
             <button className="px-6 py-3 border rounded font-semibold">
               See how it works
             </button>
@@ -36,20 +46,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
-      <section>
-        <HowItWorksPage />
-      </section>
+      <HowItWorksPage />
+      <FeaturesPage />
+      <PricingPage />
 
-      {/* FEATURES */}
-      <section>
-        <FeaturesPage />
-      </section>
-
-      {/* PRICING */}
-      <section>
-        <PricingPage />
-      </section>
+      <WaitlistModal open={open} onClose={() => setOpen(false)} />
     </main>
   );
 }
