@@ -24,9 +24,14 @@ export default function PricingPage() {
             <li>✔ Offline support</li>
           </ul>
 
-          <button className="w-full py-3 sm:py-3.5 rounded-xl bg-black text-white font-semibold hover:opacity-90 transition">
-            Download Logger
-          </button>
+          <a
+            href="https://app.youform.com/forms/tabbd897"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full py-3 sm:py-3.5 rounded-xl bg-black text-white font-semibold hover:opacity-90 transition text-center block"
+          >
+            Join Waitlist
+          </a>
           <p className="mt-4 text-xs text-gray-500">Start logging in under a minute.</p>
         </div>
 
