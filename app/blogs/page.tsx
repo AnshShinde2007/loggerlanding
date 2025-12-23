@@ -55,21 +55,21 @@ export default function BlogsPage() {
     return (
         <main className="w-full">
             {/* Hero Section */}
-            <section className="py-20 px-6 sm:px-12 lg:px-16 bg-black text-white">
+            <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-16 bg-black text-white">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
+                    <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6">
                         Logger Blog
                     </h1>
-                    <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                    <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
                         Tips, insights, and stories to help you train smarter and stay consistent.
                     </p>
                 </div>
             </section>
 
             {/* Blog Posts Grid */}
-            <section className="py-20 px-6 sm:px-12 lg:px-16">
+            <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-16">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                         {blogPosts.map((post, index) => (
                             <Link
                                 key={index}
@@ -82,7 +82,7 @@ export default function BlogsPage() {
                                 </div>
 
                                 {/* Content */}
-                                <div className="p-6">
+                                <div className="p-5 sm:p-6">
                                     <div className="flex items-center gap-3 mb-3 text-sm text-gray-500">
                                         <span className="px-3 py-1 bg-black text-white rounded-full text-xs font-semibold">
                                             {post.category}
@@ -90,11 +90,11 @@ export default function BlogsPage() {
                                         <span>{post.readTime}</span>
                                     </div>
 
-                                    <h2 className="text-2xl font-bold mb-3 group-hover:opacity-70 transition-opacity">
+                                    <h2 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 group-hover:opacity-70 transition-opacity">
                                         {post.title}
                                     </h2>
 
-                                    <p className="text-gray-600 mb-4 line-clamp-3">
+                                    <p className="text-gray-600 mb-3 sm:mb-4 line-clamp-3 text-sm sm:text-base">
                                         {post.excerpt}
                                     </p>
 
@@ -112,23 +112,23 @@ export default function BlogsPage() {
             </section>
 
             {/* Newsletter CTA */}
-            <section className="py-20 px-6 sm:px-12 lg:px-16 bg-gray-50">
+            <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-16 bg-gray-50">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+                    <h2 className="text-3xl sm:text-5xl font-bold mb-4 sm:mb-6">
                         Stay Updated
                     </h2>
-                    <p className="text-xl text-gray-600 mb-8">
+                    <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8">
                         Get the latest training tips and Logger updates delivered to your inbox.
                     </p>
-                    <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <form className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-md mx-auto">
                         <input
                             type="email"
                             placeholder="Enter your email"
-                            className="flex-1 px-6 py-3 rounded-lg border-2 border-black font-medium focus:outline-none focus:ring-2 focus:ring-black"
+                            className="flex-1 px-5 sm:px-6 py-3 rounded-lg border-2 border-black font-medium focus:outline-none focus:ring-2 focus:ring-black"
                         />
                         <button
                             type="submit"
-                            className="px-8 py-3 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors"
+                            className="px-6 sm:px-8 py-3 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors"
                         >
                             Subscribe
                         </button>

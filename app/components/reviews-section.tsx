@@ -39,28 +39,29 @@ export default function ReviewsSection() {
     ];
 
     return (
-        <section id="reviews" className="py-20 px-6 sm:px-12 lg:px-16">
+        <section id="reviews" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-16">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+                    <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
                         Loved by Athletes
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
                         Join thousands of people who train seriously
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 auto-rows-fr">
                     {reviews.map((review, index) => (
                         <div
                             key={index}
-                            className="p-6 border-2 border-black rounded-2xl bg-white hover:shadow-lg transition-shadow"
+                            className="p-5 sm:p-6 border-2 border-black rounded-2xl bg-white hover:shadow-lg transition-shadow h-full flex flex-col"
                         >
-                            <div className="flex gap-1 mb-4">
+                            <div className="flex gap-1 mb-3 sm:mb-4" aria-label={`${review.rating} out of 5 stars`}>
+                                <span className="sr-only">{review.rating} out of 5 stars</span>
                                 {[...Array(review.rating)].map((_, i) => (
                                     <svg
                                         key={i}
-                                        className="w-5 h-5 text-black"
+                                        className="w-4 h-4 sm:w-5 sm:h-5 text-black"
                                         fill="currentColor"
                                         viewBox="0 0 20 20"
                                     >
@@ -68,10 +69,10 @@ export default function ReviewsSection() {
                                     </svg>
                                 ))}
                             </div>
-                            <p className="text-gray-700 mb-4 text-lg">{review.content}</p>
-                            <div className="border-t-2 border-gray-200 pt-4">
-                                <p className="font-bold text-lg">{review.name}</p>
-                                <p className="text-gray-500">{review.role}</p>
+                            <p className="text-gray-700 mb-4 text-base sm:text-lg flex-1">{review.content}</p>
+                            <div className="border-t-2 border-gray-200 pt-3 sm:pt-4">
+                                <p className="font-bold text-base sm:text-lg">{review.name}</p>
+                                <p className="text-gray-500 text-sm sm:text-base">{review.role}</p>
                             </div>
                         </div>
                     ))}

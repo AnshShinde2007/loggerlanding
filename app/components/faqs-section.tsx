@@ -21,13 +21,13 @@ export default function FAQsSection() {
     ];
 
     return (
-        <section id="faqs" className="py-20 px-6 sm:px-12 lg:px-16 bg-gray-50">
+        <section id="faqs" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-16 bg-gray-50">
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+                    <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
                         Frequently Asked Questions
                     </h2>
-                    <p className="text-xl text-gray-600">
+                    <p className="text-base sm:text-lg md:text-xl text-gray-600">
                         Everything you need to know about Logger
                     </p>
                 </div>
@@ -39,12 +39,12 @@ export default function FAQsSection() {
                             className="border-2 border-black rounded-2xl bg-white overflow-hidden"
                         >
                             <button
-                                className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                                className="w-full px-4 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                             >
-                                <span className="text-xl font-bold pr-4">{faq.question}</span>
+                                <span className="text-lg sm:text-xl font-bold pr-4">{faq.question}</span>
                                 <svg
-                                    className={`w-6 h-6 flex-shrink-0 transition-transform ${openIndex === index ? "rotate-180" : ""
+                                    className={`w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0 transition-transform ${openIndex === index ? "rotate-180" : ""
                                         }`}
                                     fill="none"
                                     stroke="currentColor"
@@ -59,7 +59,7 @@ export default function FAQsSection() {
                                 </svg>
                             </button>
                             {openIndex === index && (
-                                <div className="px-6 pb-5 text-gray-600 text-lg border-t-2 border-black pt-5">
+                                <div className="px-4 sm:px-6 pb-4 sm:pb-5 text-gray-600 text-base sm:text-lg border-t-2 border-black pt-4 sm:pt-5">
                                     {faq.answer}
                                 </div>
                             )}
