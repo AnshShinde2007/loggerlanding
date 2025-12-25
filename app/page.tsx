@@ -46,19 +46,17 @@ export default function HomePage() {
 
           {/* Right Column - Image Placeholder */}
           <div className="flex items-center justify-center lg:justify-end">
-            <div className="w-full max-w-[260px] sm:max-w-[300px] lg:max-w-[360px] aspect-[9/19] bg-gradient-to-br from-gray-50 to-gray-100 rounded-[3rem] border-8 border-black p-4 shadow-2xl">
-              <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
+              <div className="max-w-[400px] w-full bg-white rounded-[2rem] overflow-hidden">
                 <Image
-                  src="/hero.png"
+                  src="/hero2.png"
                   alt="Logger app hero preview"
-                  width={720}
-                  height={1520}
+                  width={500}
+                  height={1056}
                   priority
                   className="w-full h-full object-cover"
-                  sizes="(max-width: 640px) 260px, (max-width: 1024px) 300px, 360px"
+                  sizes="(max-width: 640px) 200px, (max-width: 1024px) 280px, 400px"
                 />
               </div>
-            </div>
           </div>
         </div>
       </section>
