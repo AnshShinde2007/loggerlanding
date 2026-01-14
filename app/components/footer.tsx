@@ -67,8 +67,9 @@ export default function Footer() {
               <p className="text-gray-400 text-sm">ARTHLETE MOTIONS PRIVATE LIMITED • All rights reserved</p>
               <div className="flex gap-6 text-sm">
                 <Link href="#" className="text-gray-400 hover:text-white transition-colors">Terms</Link>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">Privacy</Link>
+                <Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">Privacy</Link>
                 <Link href="#" className="text-gray-400 hover:text-white transition-colors">Cookies</Link>
+                <Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">Delete Account</Link>
               </div>
             </div>
           </div>

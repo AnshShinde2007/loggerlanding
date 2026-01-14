@@ -43,8 +43,6 @@ export default function HomePage() {
               Powered by Arthlete
             </p>
           </div>
-
-          {/* Right Column - Image Placeholder */}
           <div className="flex items-center justify-center lg:justify-end">
               <div className="max-w-[400px] w-full bg-white rounded-[2rem] overflow-hidden">
                 <Image
